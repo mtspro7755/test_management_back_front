@@ -1,0 +1,15 @@
+# Django et DRF
+Django>=4.2
+djangorestframework>=3.14
+
+# Authentification JWT
+djangorestframework-simplejwt>=5.3.0
+
+# Documentation Swagger
+drf-yasg>=1.21.7
+
+# Base de données PostgreSQL (optionnel)
+psycopg2-binary>=2.9
+
+# Pour une gestion de dates propre (optionnel mais utile)
+pytz
