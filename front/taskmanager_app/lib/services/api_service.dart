@@ -9,7 +9,7 @@ class ApiService {
   static const String _baseUrl = 'http://127.0.0.1:8000/api';
   static const storage = FlutterSecureStorage();
 
-  // 🔐 Auth (inchangé)
+  //  Auth (inchangé)
   static Future<http.Response> login(String username, String password) {
     return http.post(
       Uri.parse('$_baseUrl/auth/login/'),
@@ -26,7 +26,7 @@ class ApiService {
     );
   }
 
-  // 📁 Projets
+  //  Projets
 
   static Future<List<Projet>> getProjets() async {
     final token = await storage.read(key: 'access_token');
@@ -86,7 +86,7 @@ class ApiService {
     }
   }
 
-  // 📝 Tâches
+  //  Tâches
 
   static Future<Tache> createTache(Map<String, dynamic> body) async {
     final token = await storage.read(key: 'access_token');
@@ -146,7 +146,7 @@ class ApiService {
   }
 
 
-  // 🛡️ Auth header helper
+  //  Auth header helper
   static Map<String, String> _authHeader(String? token) => {
     'Authorization': 'Bearer $token',
     'Content-Type': 'application/json',
